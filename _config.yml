@@ -1,0 +1,40 @@
+# Site settings
+title: 'Nigel Dookie'
+description: 'The murmurings of a Trinidadian wanderer'
+url: 'http://nigeldookie.com'
+baseurl: '/'
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+
+author:
+  name: 'Nigel Dookie'
+  email: nigel@nigeldookie.com
+  twitter_username: ndookie
+  facebook_username: nigel.dookie
+  github_username:  ndookie
+  linkedin_username:  nigel-dookie-88726440
+  resume: resume.pdf
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+gems: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
